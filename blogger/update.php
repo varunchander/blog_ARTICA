@@ -1,11 +1,10 @@
 <?php
 session_start();
-if(!$_SESSION['uname']){header('Location:b.php');}
+if(!$_SESSION['uname']){header('Location:index.php');}
 if(isset($_SESSION["uname"]) && isset($_POST["update"])){
 	$uname = $_SESSION["uname"];
 	$desc=$_POST["update"];
 	$tablem ='blogmaster';
-	
 	$user ='root';
 	$pwd = '';
 	$db1=mysql_connect('localhost',$user,$pwd) or die('unable to connect to database');

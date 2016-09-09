@@ -12,7 +12,7 @@ if(isset($_GET['delbg'])){
 	$val = mysql_query($blogdel);
 	if($val){
 		echo 'succesfully removed';
-		header('Location: b.php');
+		header('Location: index.php');
 	}
 }
 ?>
@@ -127,7 +127,7 @@ while($row = mysql_fetch_array($result)){
 		 
 	  }
 	  if(isset($_SESSION['admin'])){
-		  echo "<form  class='form-horizontal' role='form' action='b.php' method='get'>";
+		  echo "<form  class='form-horizontal' role='form' action='index.php' method='get'>";
 		  echo "<div class='form-group'>";
           echo "<div class='col-sm-offset-9 col-sm-10'>";
 		  echo "<input type='hidden' name='delbg' value=".$row['blog_id'].">";

@@ -22,7 +22,7 @@
       <a class="navbar-brand" href="#"> ARTICA </a>
     </div>
     <div class="navbar-header">
-      <a class="navbar-brand" href="b.php"> Home </a>
+      <a class="navbar-brand" href="index.php"> Home </a>
     </div> 
 	  <ul class="nav navbar-nav navbar-right">
      <?php
@@ -36,7 +36,7 @@
 </nav>
 
 <?php
-//if(!$_SESSION['uname']){header('Location:b.php');}
+//if(!$_SESSION['uname']){header('Location:index.php');}
 $user = 'root';
 $pwd = '';
 $db1=mysql_connect('localhost',$user,$pwd) or die('unable to connect to database');
@@ -95,7 +95,7 @@ $comment = addslashes($comment);
 if($status){
 $comm = "insert into comments(blogid,uname,comment) values('$blogid','$uname','$comment')";	
 $result = mysql_query($comm) or die('could not connect to table'.mysql_error());
-//header('Location:b.php');
+//header('Location:index.php');
 }
 header('Location:comments.php?blogid='.$blogid.'');
 }

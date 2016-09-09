@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['uname']){header('Location:b.php');}
+if(!$_SESSION['uname']){header('Location:index.php');}
 if(isset($_SESSION["uname"]) && isset($_POST["description"])){
 	$uname = $_SESSION["uname"];
 	$desc=$_POST["description"];
@@ -33,6 +33,7 @@ if(isset($_SESSION["uname"]) && isset($_POST["description"])){
 	$bgid = mysql_query($query_bgid);
 	$bgid = mysql_fetch_array($bgid);
 	$bid = $bgid['blog_id'];
+
 if( getimagesize($_FILES["myfile"]["tmp_name"]) != false) {
     $name= addslashes($_FILES['myfile']['name']);
 	$image=addslashes($_FILES['myfile']['tmp_name']);
@@ -72,9 +73,8 @@ else{
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
     
  </head>
 <body>

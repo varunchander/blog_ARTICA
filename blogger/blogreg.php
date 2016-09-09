@@ -11,6 +11,7 @@ $lname = $_POST['lname'];
 $email = $_POST['email'];
 $uname = $_POST['uname'];
 $pword = $_POST['pword'];
+$var = $_POST['uname'];
 
 if(! get_magic_quotes_gpc()){
 $fname = addslashes($fname);
@@ -24,13 +25,18 @@ $user_Check = "select * from $table where uname = '$uname'";
 $reg_time = date("Y-m-d");
 $sql = "INSERT INTO $table(fname,lname,email,uname,pword,created_date) VALUES('$fname','$lname','$email','$uname','$pword','$reg_time')";
 $user_Check_Status = mysql_query($user_Check) or die('could not connect to table'.mysql_error());
+$val = count($user_Check_Status);
+echo $val;
 $us = mysql_fetch_array($user_Check_Status);
-if($us["uname"] == $uname || $uname='zzz')
+echo $us['uname'];
+if(($uname ==  'zzz') || ($var == $us['uname']))
 {
-	echo "the user with this name already exists";
+	echo "the user with this name already exists".$uname;
+	echo "<br>".$us;
 	header('Location: blogreg.php?repeat_name=1');
 }	
 else{
+	
 $status = mysql_query($sql) or die(mysql_error());
 if(! $status){
 	die('could not enter the data '.mysql_error());

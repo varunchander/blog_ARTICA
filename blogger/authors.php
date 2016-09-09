@@ -41,7 +41,6 @@ if(isset($_GET['permit'])){
 	  
     }
 </style>
-  <title>Bootstrap Case</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -55,7 +54,7 @@ if(isset($_GET['permit'])){
       <a class="navbar-brand" > ARTICA </a>
     </div>
 	 <div class="navbar-header">
-      <a class="navbar-brand" href="b.php"> Home </a>
+      <a class="navbar-brand" href="index.php"> Home </a>
     </div>
     <ul class="nav navbar-nav">
 		<li><a href="contactus.php">Contact Us</a></li>

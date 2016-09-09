@@ -18,12 +18,13 @@
       <a class="navbar-brand" href="#"> ARTICA </a>
     </div>
 	 <div class="navbar-header">
-      <a class="navbar-brand" href="b.php"> Home</a>
+      <a class="navbar-brand" href="index.php"> Home</a>
     </div>
 </div>
 </nav>
 <center>
 <h5>ARTICA blogs main emphasis is posting the articles related to various topics that includes arts, literature ,.. </h5>
+contact us : Varun <br> gmail: artica9898@gmail.com <br> Location: Ichchanath,Svnit.
 </center>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['uname']){header('Location:b.php');}
+if(!$_SESSION['uname']){header('Location:index.php');}
 if(isset($_POST['addblog'])){
 header('Location: blogentry.php');
 }
@@ -50,7 +50,7 @@ else{
       <a class="navbar-brand" href="#"> ARTICA </a>
     </div>
     <ul class="nav navbar-nav">
-      <li ><a href="b.php" >Home</a></li>
+      <li ><a href="index.php" >Home</a></li>
 	   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">TOPICS <span class="caret"></span></a>
 	    <ul class="dropdown-menu">
           <li><a href="#">topic-1</a></li>
